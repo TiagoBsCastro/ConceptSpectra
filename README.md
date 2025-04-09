@@ -110,12 +110,12 @@ python -m ConceptSpectra.cli --H0 70 --Omega_b 0.05 --Omega_cdm 0.25 --w0_fld -1
 This command will generate an output file (for example, in a directory named Pk) that contains the computed power spectrum data.
 
 ## Repository Structure
-
+```bash
 ConceptSpectra/
 ├── __init__.py          # Package initializer; exposes core functions.
 ├── computations.py      # Contains the core cosmological functions.
 └── cli.py               # Command-line interface for executing simulations.
-
+```
 ## Contributing
 
 Contributions are welcome. If you wish to extend the functionality of ConceptSpectra or report issues, please open an issue or submit a pull request on GitHub.
