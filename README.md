@@ -18,7 +18,7 @@ CO*N*CEPTSpectra is a Python package that provides tools for computing the linea
 
 ## Dependencies
 
-CO*N*CEPTSpectra has one primary dependency: [CO*N*CEPT](https://github.com/jmd-dk/concept/). It is designed to be **only** used with the Python environment that is installed alongside CO*N*CEPT.
+CO*N*CEPTSpectra has one primary dependency: [CO*N*CEPT](https://github.com/jmd-dk/concept/). It is designed to be used **only** with the Python environment that is installed alongside CO*N*CEPT.
 
 ## Installation
 
