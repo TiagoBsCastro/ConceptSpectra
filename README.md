@@ -1,8 +1,8 @@
-# ConceptSpectra
+# CO*N*CEPTSpectra
 
 <div align="justify">
 
-ConceptSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
+CO*N*CEPTSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
 
 ## Features
 
@@ -15,6 +15,10 @@ ConceptSpectra is a Python package that provides tools for computing the linear 
 - Flexible parameters: Users may supply their own CLASS parameters via the command line.
 
 - Command-line interface for quick simulation runs.
+
+## Dependencies
+
+CO*N*CEPTSpectra has one primary dependency: the [CO*N*CEPT repository](https://github.com/jmd-dk/concept/). It is designed to be used with the Python environment that is installed alongside CO*N*CEPT. Users must ensure they are using the appropriate Python version provided with CO*N*CEPT to guarantee compatibility.
 
 ## Installation
 
@@ -36,15 +40,15 @@ You may install the package locally using pip (optionally in editable mode):
 pip install -e .
 ```
 
-Alternatively, you may use the package directly without installation by ensuring that the ConceptSpectra folder is in your Python path.
+Alternatively, you may use the package directly without installation by ensuring that the CO*N*CEPTSpectra folder is in your Python path.
 
 ## Usage
 
-ConceptSpectra can be used in two ways: as an imported module within your own Python scripts or via the command-line interface.
+CO*N*CEPTSpectra can be used in two ways: as an imported module within your own Python scripts or via the command-line interface.
 
 ### Library Usage
 
-Below is an example of how to use ConceptSpectra in your own Python script to compute the dark energy fluid power spectrum:
+Below is an example of how to use CO*N*CEPTSpectra in your own Python script to compute the dark energy fluid power spectrum:
 
 ```python
 import numpy as np
@@ -76,7 +80,7 @@ params = {
     "perturb_sampling_stepsize": 0.01,
     # Output settings
     "output": "dTk",
-    # Generate modes as a formatted string using ConceptSpectra's get_modes
+    # Generate modes as a formatted string using CO*N*CEPTSpectra's get_modes
     "k_output_values": get_modes(1e-3, 1e1, 30, as_str=True)
 }
 
@@ -108,7 +112,7 @@ The above script is available as example.py and can be run as:
 
 ### Command-Line Interface (CLI) Usage
 
-ConceptSpectra includes a CLI that allows users to specify cosmological parameters. For example, to compute the power spectrum using custom parameters, run:
+CO*N*CEPTSpectra includes a CLI that allows users to specify cosmological parameters. For example, to compute the power spectrum using custom parameters, run:
 
 ```bash
 python -m ConceptSpectra.cli --H0 70 --Omega_b 0.05 --Omega_cdm 0.25 --w0_fld -1.05 --wa_fld 0.1 --cs2_fld 1e-4 --A_s 2.0e-9 --n_s 0.97 --a 0.8
@@ -125,7 +129,7 @@ ConceptSpectra/
 ```
 ## Contributing
 
-Contributions are welcome. If you wish to extend the functionality of ConceptSpectra or report issues, please open an issue or submit a pull request on GitHub.
+Contributions are welcome. If you wish to extend the functionality of CO*N*CEPTSpectra or report issues, please open an issue or submit a pull request on GitHub.
 
 ## License
 
