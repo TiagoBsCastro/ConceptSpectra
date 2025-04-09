@@ -1,11 +1,10 @@
 """
 Command-Line Interface (CLI) for ConceptSpectra
 
-This module provides a command-line interface for running cosmological simulations.
+This module provides a command-line interface for computing spectra.
 Users can supply their own cosmological parameters as command-line arguments to generate
 the linear matter power spectrum.
 """
-
 import argparse
 import os
 import sys
@@ -15,10 +14,10 @@ from .computations import get_modes, get_power
 
 def run_simulation(user_params):
     """
-    Run a cosmological simulation with user-specified parameters.
+    Run the spectra computation with user-specified parameters.
 
     Merges user-specified parameters with default cosmological settings,
-    computes the combined power spectrum for baryons and cold dark matter at a specified scale factor,
+    computes the power spectrum for the specified species at a given scale factor,
     and writes the results to a text file.
 
     Parameters:
@@ -55,33 +54,40 @@ def run_simulation(user_params):
         # Output settings and gauge
         "output": "dTk",
         "gauge": "synchronous",
+        "P_k_max_1/Mpc": 0,
     }
     # Update defaults with user parameters
     defaults.update(user_params)
 
     k_min = 1e-3  # Mpc⁻¹
-    k_max = 3e1   # Mpc⁻¹
+    k_max = 1e1   # Mpc⁻¹
     modes_per_decade = 30
     defaults["k_output_values"] = get_modes(k_min, k_max, modes_per_decade, as_str=True)
 
     # Determine the scale factor at which to compute the spectrum (default is 1)
     a = defaults.get("a", 1.0)
+    defaults.pop('a', None)
 
-    # Compute the combined power spectrum for baryons and cold dark matter
-    modes, power = get_power(defaults, "b + cdm", "nbody", a=a)
+    # Get the species to be computed (default is "b + cdm")
+    species = defaults.get("species", "b + cdm")
+    defaults.pop("species", None)
+
+    # Compute the power spectrum for the chosen species
+    modes, power = get_power(defaults, species, "nbody", a=a)
 
     h = defaults["H0"] / 100
-    output_file = f"Pk/powerspec-custom-a={a:4.3f}"
+    output_file = f"Pk/powerspec-{species}-a={a:4.3f}"
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     np.savetxt(output_file, np.transpose([modes / h, power * h**3]))
-    print(f"Saved power spectrum to {output_file}")
+    print(f"Saved power spectrum for species '{species}' to {output_file}")
 
 
 def main():
     """
     Entry point for the command-line interface.
 
-    Parses command-line arguments to obtain cosmological parameters and calls run_simulation.
+    Parses command-line arguments to obtain cosmological parameters and the species parameter,
+    and calls run_simulation.
 
     Returns:
         None.
@@ -100,8 +106,10 @@ def main():
     # Primordial spectrum parameters
     parser.add_argument("--A_s", type=float, default=2.1e-9, help="Primordial amplitude [default: 2.1e-9]")
     parser.add_argument("--n_s", type=float, default=0.96, help="Primordial spectral index [default: 0.96]")
-    # Other parameter: scale factor
+    # Other parameters
     parser.add_argument("--a", type=float, default=1.0, help="Scale factor [default: 1.0]")
+    parser.add_argument("--species", type=str, default="b + cdm", 
+                        help="Species for which to compute the power spectrum (e.g., 'b + cdm', 'fld', etc.) [default: 'b + cdm']")
     args = parser.parse_args()
 
     # Convert parsed arguments to a dictionary

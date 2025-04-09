@@ -109,7 +109,6 @@ def get_cosmo(params=None, cache_mem=None, cache_disk=None):
             pickle.dump((params, modes, bg, pts), f)
     return modes, bg, pts
 
-
 def get_modes(k_min, k_max, modes_per_decade, as_str=False, n_decimals=3):
     """
     Generate an array of modes between k_min and k_max.
