@@ -4,7 +4,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11048430.svg)](https://doi.org/10.5281/zenodo.11048430)
-[![Last Updated](https://img.shields.io/badge/updated-April%2025-orange.svg)]
+![Last Updated](https://img.shields.io/badge/updated-April%2025-orange.svg)
 
 <div align="justify">
 
