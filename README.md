@@ -1,6 +1,6 @@
 # CO*N*CEPTSpectra
 
-<img src="./logo.png" width="400" alt="Logo">
+<img src="./logo.png" width="380" alt="Logo">
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11048430.svg)](https://doi.org/10.5281/zenodo.11048430)
