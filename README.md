@@ -2,13 +2,11 @@
 
 <div align="justify">
 
-CO*N*CEPTSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
+CO*N*CEPTSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
 
 ## Features
 
-- Compute logarithmically spaced k-modes for power spectrum calculations.
-
-- Generate the matter power spectrum for baryons, cold dark matter, and dark energy fluid.
+- Generate the power spectrum for several species: baryons, cold dark matter, dark energy fluid, and other relativistic species.
 
 - Use in-memory and on-disk caching to reduce redundant CLASS computations.
 
@@ -18,7 +16,7 @@ CO*N*CEPTSpectra is a Python package that provides tools for computing the linea
 
 ## Dependencies
 
-CO*N*CEPTSpectra has one primary dependency: [CO*N*CEPT](https://github.com/jmd-dk/concept/). It is designed to be used **only** with the Python environment that is installed alongside CO*N*CEPT.
+CO*N*CEPTSpectra has **one** primary dependency: [CO*N*CEPT](https://github.com/jmd-dk/concept/). It is designed to be used **only** with the Python environment that is installed alongside CO*N*CEPT.
 
 ## Installation
 
@@ -37,7 +35,7 @@ cd ConceptSpectra
 You may install the package locally using pip (optionally in editable mode):
 
 ```bash
-pip install -e .
+(~/your_concept_path/dep/python/bin/python3 -m pip install -e .)
 ```
 
 Alternatively, you may use the package directly without installation by ensuring that the CO*N*CEPTSpectra folder is in your Python path.
