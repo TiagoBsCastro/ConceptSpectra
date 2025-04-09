@@ -1,5 +1,7 @@
 # ConceptSpectra
 
+<div align="justify">
+
 ConceptSpectra is a Python package that provides tools for computing the linear and dark energy fluid power spectra in cosmology. It integrates with CLASS (using CLASSY) to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. ConceptSpectra is designed to be flexible. Users may either import the library in their own Python scripts or use the supplied command-line interface.
 
 ## Features
@@ -127,3 +129,6 @@ This project is provided under the MIT License. See the LICENSE file for details
 ## Contact
 
 For additional questions, please contact the repository maintainer at tiago.castro@inaf.it.
+
+</div>
+
