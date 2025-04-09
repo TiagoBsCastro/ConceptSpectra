@@ -177,4 +177,4 @@ cython_debug/
 *.pdf
 
 # cache
-*.cache*
+*.*cache*

@@ -291,6 +291,5 @@ def get_power(params, species, gauge="synchronous", *, a=None, z=None):
     delta_combi = delta_rho_combi / rho_combi
     zeta = get_primordial_curvature_perturbation(params, modes)
     power_combi = (delta_combi * zeta) ** 2
-    print(params)
     return modes, power_combi
 
