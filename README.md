@@ -141,6 +141,10 @@ Contributions are welcome. If you wish to extend the functionality of CO*N*CEPTS
 
 This project is provided under the MIT License. See the LICENSE file for details.
 
+## Credits
+
+The backbone of ConceptSpectra was developed by Jeppe Dakin.
+
 ## Contact
 
 For additional questions, please contact the repository maintainer at tiago.castro@inaf.it.
