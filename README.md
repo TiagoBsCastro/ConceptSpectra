@@ -2,7 +2,7 @@
 
 <div align="justify">
 
-ConceptSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. ConceptSpectra is designed to be flexible. Users may either import the library in their own Python scripts or use the supplied command-line interface.
+ConceptSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various matter species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
 
 ## Features
 
@@ -21,7 +21,7 @@ ConceptSpectra is a Python package that provides tools for computing the linear 
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your_username/ConceptSpectra.git
+git clone https://github.com/TiagoBsCastro/ConceptSpectra.git
 ```
 
 Change into the repository directory:
