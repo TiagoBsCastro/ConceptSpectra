@@ -1,5 +1,11 @@
 # CO*N*CEPTSpectra
 
+<img src="./logo.png" width="440" alt="Logo">
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[comment]: # [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11048430.svg)](https://doi.org/10.5281/zenodo.11048430)
+[![Last Updated](https://img.shields.io/badge/updated-April%2025-orange.svg)]
+
 <div align="justify">
 
 CO*N*CEPTSpectra is a Python package that provides tools for computing the linear spectra of different species in cosmology. It integrates with CLASS (using CLASSY) deployed in CO*N*CEPT to compute background quantities, perturbations, and the corresponding power spectrum for various species. Users may either import the library in their own Python scripts or use the supplied command-line interface.
