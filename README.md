@@ -128,8 +128,10 @@ This command will generate an output file (for example, in a directory named Pk)
 ```bash
 ConceptSpectra/
 ├── __init__.py          # Package initializer; exposes core functions.
-├── computations.py      # Contains the core cosmological functions.
+├── computations.py      # contains the core cosmological functions.
+├── setup.py             # contains the setup install.
 └── cli.py               # Command-line interface for executing simulations.
+
 ```
 ## Contributing
 
