@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="ConceptSpectra",
     version="1.0.0",
-    author="Your Name",
+    author="Tiago Castro and Jeppe Dakin",
     author_email="tiago.castro@inaf.it",
     description="Compute linear power spectra in cosmology using CLASS with concept.",
     long_description=open("README.md", encoding="utf-8").read(),
@@ -25,4 +25,3 @@ setup(
         ],
     },
 )
-
