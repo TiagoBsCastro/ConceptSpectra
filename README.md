@@ -41,7 +41,7 @@ cd ConceptSpectra
 You may install the package locally using pip (optionally in editable mode):
 
 ```bash
-(~/your_concept_path/dep/python/bin/python3 -m pip install -e .)
+(source ~/your_concept_path/concept && $python -m pip install -e .)
 ```
 
 Alternatively, you may use the package directly without installation by ensuring that the CO*N*CEPTSpectra folder is in your Python path.
@@ -111,7 +111,7 @@ plt.savefig("Pk-DE.pdf")
 ```
 The above script is available as example.py and can be run as:
 ```bash
-(~/your_concept_path/dep/python/bin/python3 example.py)
+(source ~/your_concept_path/concept && $python example.py)
 ```
 
 ### Command-Line Interface (CLI) Usage
